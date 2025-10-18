@@ -1,0 +1,73 @@
+version: "3"
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  db_data:
+  var:
+  vendor:
+  node_modules:
+  mailcatcher_data:
+
+services:
+  ### EC-CUBE ##################################
+  ec-cube:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: eccube-app
+    ports:
+      - "8080:80"
+    depends_on:
+      db:
+        condition: service_healthy
+      mailcatcher:
+        condition: service_started
+    volumes:
+      # 同期の重いフォルダはボリュームで分離
+      - "var:/var/www/html/var"
+      - "vendor:/var/www/html/vendor"
+      - "node_modules:/var/www/html/node_modules"
+      - ./:/var/www/html
+    environment:
+      DATABASE_URL: "mysql://eccube:eccube@db:3306/eccube"
+      MAILER_DSN: "smtp://mailcatcher:1025"
+      ECCUBE_AUTH_MAGIC: "changeme"
+    networks:
+      - backend
+
+  ### MySQL ##################################
+  db:
+    image: mysql:8.0
+    container_name: eccube-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: eccube
+      MYSQL_USER: eccube
+      MYSQL_PASSWORD: eccube
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "13306:3306"
+    networks:
+      - backend
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 3s
+      timeout: 3s
+      retries: 5
+
+  ### Mailcatcher ##################################
+  mailcatcher:
+    image: schickling/mailcatcher
+    container_name: eccube-mailcatcher
+    ports:
+      - "1080:1080" # メール閲覧UI
+      - "1025:1025" # SMTP
+    volumes:
+      - mailcatcher_data:/data
+    networks:
+      - backend
