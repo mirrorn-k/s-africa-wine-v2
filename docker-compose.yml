@@ -5,10 +5,7 @@ networks:
     driver: bridge
 
 volumes:
-  db_data:
-  var:
-  vendor:
-  node_modules:
+  db_s-africa.wine-v2:
   mailcatcher_data:
 
 services:
@@ -19,17 +16,13 @@ services:
       dockerfile: Dockerfile
     container_name: eccube-app
     ports:
-      - "8080:80"
+      - "8150:80"
     depends_on:
       db:
         condition: service_healthy
       mailcatcher:
         condition: service_started
     volumes:
-      # 同期の重いフォルダはボリュームで分離
-      - "var:/var/www/html/var"
-      - "vendor:/var/www/html/vendor"
-      - "node_modules:/var/www/html/node_modules"
       - ./:/var/www/html
     environment:
       DATABASE_URL: "mysql://eccube:eccube@db:3306/eccube"
@@ -49,9 +42,9 @@ services:
       MYSQL_USER: eccube
       MYSQL_PASSWORD: eccube
     volumes:
-      - db_data:/var/lib/mysql
+      - db_s-africa.wine-v2:/var/lib/mysql
     ports:
-      - "13306:3306"
+      - "8151:3306"
     networks:
       - backend
     healthcheck:
