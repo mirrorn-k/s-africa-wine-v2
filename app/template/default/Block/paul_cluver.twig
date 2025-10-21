@@ -1,0 +1,26 @@
+<section class="container cf m_20">
+    <div class="row">
+        {% if Product.ProductCategories is not empty %}
+        {% for ProductCategory in Product.ProductCategories %}
+        {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+        {% for Category in ProductCategory.Category.path %}
+        {% if Category.id != 62 %}
+        <div class="col-8 offset-2 col-md-3 offset-md-0">
+            <img src="{{ asset('/html/user_data/upload/img/logo/p_brand25.gif') }}" alt="{{ Category.name }}" style="width: 100%;">
+        </div>
+        <div class="col-12 col-md-9">
+            <h3 class="ltx_15 tx_bld">
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}" title="{{ Category.name }}">{{ Category.name }}</a>
+            </h3>
+            <h3 class="ltx_15 tx_bld">
+南アフリカで最も急速に伸びているワイナリー</h3>
+            <p class="m_5">ポールクルーバー・ワイナリーは、南アフリカ・ケープタウン周辺では平均気温が最も低いエルギン地区にあります。オーナーのポールクルーバー氏は、「徹底した質にこだわるワイン造り」をコンセプトにワイン造りの工程は、ひとつひとつ丁寧な手作業で行われています。</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+    </div>
+</section><!-- / .goodsBrandArea cf m_20 -->

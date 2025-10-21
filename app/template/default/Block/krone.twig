@@ -1,0 +1,26 @@
+<section class="container cf m_20">
+    <div class="row">
+        {% if Product.ProductCategories is not empty %}
+        {% for ProductCategory in Product.ProductCategories %}
+        {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+        {% for Category in ProductCategory.Category.path %}
+        {% if Category.id != 62 %}
+        <div class="col-8 offset-2 col-md-3 offset-md-0">
+            <img src="{{ asset('/html/user_data/upload/img/logo/p_brand8.gif') }}" alt="{{ Category.name }}" style="width: 100%;">
+        </div>
+        <div class="col-12 col-md-9">
+            <h3 class="ltx_15 tx_bld">
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}" title="{{ Category.name }}">{{ Category.name }}</a>
+            </h3>
+            <h3 class="ltx_15 tx_bld">
+南アフリカワイン業界のパイオニア</h3>
+            <p class="m_5">ワイナリー、クローヌ（トウェー・ヤンガ・ゲゼレン）は、この地区にあり、家族経営としてはこの地区で最も古く、南アフリカ全体でも2番目に古いという伝統的な家族クローヌ家が運営している。トウェー・ヤンガ・ゲゼレンとは難しい名前だが、「二人の若い独身男達」という意味で二人の若者によって始まった。</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+    </div>
+</section><!-- / .goodsBrandArea cf m_20 -->

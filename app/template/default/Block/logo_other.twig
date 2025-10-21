@@ -1,0 +1,17 @@
+<div class="hero-wrap">
+    <div class="header arch">
+        <div class="ec-headerTitle__title">
+            <p>-南アフリカワイン専門 Online shop-</p>
+            <div>
+                <a href="{{ url('homepage') }}">
+                   <!--{{ BaseInfo.shop_name }}-->
+                    <img src="{{ asset('/html/user_data/upload/img/logo.svg') }}" alt="南アフリカワイン専門 Online shop">
+                </a>
+            </div>
+            <p class="for_front">360年以上の歴史を持つオーガニック&エクセレントワイン</p>
+        </div>
+    </div>
+</div>
+{% if Page.url == 'homepage' %}
+<div class="for_front text-center"><iframe src="https://www.youtube.com/embed/1kY6rAQiva4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{% endif %}

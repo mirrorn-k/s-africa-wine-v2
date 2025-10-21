@@ -1,0 +1,71 @@
+{*
+* フリーエリアにHTML直書きしていたものをテンプレート化
+*
+*
+*
+*}
+
+<div class="productsheet__table">
+  <h2><small>{{ Product.name }}</small></h2>
+  <table>
+    {# ワイナリー（カテゴリID=62の子） #}
+    <tr>
+      <th>ワイナリー：</th>
+      <td>
+        {% for ProductCategory in Product.ProductCategories %}
+          {% set Cat = ProductCategory.Category %}
+          {% if Cat.Parent and Cat.Parent.id == 62 %}
+            {% for Category in Cat.path %}
+              {% if Category.id != 62 %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </td>
+    </tr>
+
+    {# 原産国（DB項目） #}
+    {% if Product.origin %}
+    <tr><th>原産国：</th><td>{{ Product.origin }}</td></tr>
+    {% endif %}
+
+    {# タイプ（カテゴリ） #}
+    <tr>
+      <th>タイプ：</th>
+      <td>
+        {% for ProductCategory in Product.ProductCategories %}
+          {% set Cat = ProductCategory.Category %}
+          {% if Cat.Parent and Cat.Parent.id in [27,28,29,39] %}
+            <a href="{{ url('product_list') }}?category_id={{ Cat.id }}">{{ Cat.name }}</a>
+          {% endif %}
+        {% endfor %}
+      </td>
+    </tr>
+
+    {# 品種（search_word） #}
+    {% if Product.search_word %}
+    <tr><th>主要品種：</th><td>{{ Product.search_word }}</td></tr>
+    {% endif %}
+
+    {% if Product.alcohol %}
+    <tr><th>アルコール度数：</th><td>{{ Product.alcohol }}</td></tr>
+    {% endif %}
+
+    {% if Product.capacity %}
+    <tr><th>容量：</th><td>{{ Product.capacity }}</td></tr>
+    {% endif %}
+
+    {% if Product.vintage %}
+    <tr><th>ヴィンテージ：</th><td>{{ Product.vintage }}</td></tr>
+    {% endif %}
+
+    {% if Product.award %}
+    <tr><th>受賞／評価：</th><td>{{ Product.award }}</td></tr>
+    {% endif %}
+  </table>
+</div>
+
+<div class="ec-productRole__description">
+  {{ Product.free_area|nl2br }} {# ← HTMLではなくテキストを改行付きで表示 #}
+</div>

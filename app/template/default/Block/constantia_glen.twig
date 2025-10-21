@@ -1,0 +1,26 @@
+<section class="container cf m_20">
+    <div class="row">
+        {% if Product.ProductCategories is not empty %}
+        {% for ProductCategory in Product.ProductCategories %}
+        {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+        {% for Category in ProductCategory.Category.path %}
+        {% if Category.id != 62 %}
+        <div class="col-8 offset-2 col-md-3 offset-md-0">
+            <img src="{{ asset('/html/user_data/upload/img/logo/p_constantiaglen1.jpg') }}" alt="{{ Category.name }}" style="width: 100%;">
+        </div>
+        <div class="col-12 col-md-9">
+            <h3 class="ltx_15 tx_bld">
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}" title="{{ Category.name }}">{{ Category.name }}</a>
+            </h3>
+            <h3 class="ltx_15 tx_bld">
+南アフリカワイン発祥の地コンスタンシア</h3>
+            <p class="m_5">南アフリカで最初にブドウ栽培が始まった（1685年）コンスタンシア地区にある。「グレン」とは、「谷」を意味する。<br>冷たい大西洋に囲まれ冷涼で、比較的降水量も多い。冷涼コンスタンシア地区のボルドー品種を使った優等生的な生産者。冷涼気候によりブドウはゆっくりと成長。一粒ずつの厳選なブドウ選果とポンプを使わないグラヴィティ・システムを採用。白も赤もフレッシュで豊かな酸味、しっかりした骨格とボディ、洗練されたエレガントで美しいワインを生み出している。<br>同社ワインのキーワードは、「エレガンス、フィネス（洗練された）、バランス、コンプレックス（複雑味）」。</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+    </div>
+</section><!-- / .goodsBrandArea cf m_20 -->

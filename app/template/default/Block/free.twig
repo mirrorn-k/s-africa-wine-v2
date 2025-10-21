@@ -1,0 +1,89 @@
+<div class="bg-cover bg-whitesmoke">
+    <div class="row shopping-guide bg-white">
+        <div class="col-xs-12">
+            <h3>お買い物ガイド</h3>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="col-xs-12">
+                <h4>ご注文方法</h4>
+                <ul>
+                    <li>ご注文は、以下の手順で行ってください。</li>
+                    <li>1.商品を選んで、カートへ。</li>
+                    <li>2.レジに進む。</li>
+                    <li>3.ログインまたはゲスト購入を選択する。</li>
+                    <li>4.お客様の情報を入力する。</li>
+                    <li>5.注文する。</li>
+                    <li><br>また、当サイトではギフト包装・ラッピングなどは対応しかねますのでご注意願います。</li>
+                </ul>
+            </div>
+            <div class="col-xs-12">
+                <h4>お支払いについて</h4>
+                <ul>
+                    <li class="padd_bt20">
+                        <h4>クレジットカード</h4>VISA、MASTER、DINERS、JCB、AMEXをご使用いただけます。<br>
+                        <img src="{{ asset('/html/user_data/upload/img/logo_visa.gif') }}" width="52" alt="visa" class="m_10">
+                        <img src="{{ asset('/html/user_data/upload/img/logo_master.gif') }}" width="52" alt="master" class="m_10">
+                        <img src="{{ asset('/html/user_data/upload/img/logo_diners.gif') }}" width="52" alt="diners" class="m_10">
+                        <img src="{{ asset('/html/user_data/upload/img/logo_jcb.gif') }}" width="52" alt="jcb" class="m_10">
+                        <img src="{{ asset('/html/user_data/upload/img/logo_ae.gif') }}" width="52" alt="amex" class="m_10">
+                    </li>
+                    <li>
+                        <h4>銀行振り込み</h4>注文から7日以内にお願いいたします。7日間入金がない場合は、キャンセルとさせていただきます。
+振込手数料はお客様負担でお願いします。<br>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="col-xs-12">
+                <h4>送料について</h4>
+                <ul>
+                    <li>
+                        <img src="{{ asset('/html/user_data/upload/img/ban_goods1.png') }}" alt="11,000円(税込)以上 送料無料" class="padd_bt20"><br>
+                        一配送先毎に11,000円(税込)以上ご注文をいただいた場合、送料無料とさせていただきます。<br><br>
+                        ※チルドゆうパック料金は無料となりませんのでご注意ください。<br><br>
+                        全国一律1,100円(税込)<br>但し、離島・北海道・沖縄は1,650円(税込)<br><br>
+                    </li>
+                    <li>
+                        <h4>冷蔵配送(チルドゆうパック)料金</h4>
+                        <p>一律726円(税込)</p>
+                        チルドゆうパックをご希望の方は、「<a href="{{ url('product_detail', {'id': '207'}) }}">チルドゆうパック 指定</a>」をカートに入れてください。（通常の送料に加算されます）<br><br>
+                        ※11,000円(税込)以上お買上げの場合でも、チルドゆうパック料金は無料となりませんのでご注意ください。
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12">
+                <a href="{{ url('product_detail', {'id': '207'}) }}">
+                    <div class="col-xs-5">
+                    <img src="{{ asset('0426155548_608663f45d016.png', 'save_image') }}" width="160" alt="チルドゆうパック 指定">
+                    </div><div class="col-xs-7">
+                    <h4 class="ec-newItemRole__listItemTitle">{{ 'チルドゆうパック 726円（税込）'|trans }}</h4>
+                    <p class="ec-newItemRole__listItemPrice">{{ 'カート追加はこちら'|trans }}</p></div>
+                </a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="col-xs-12 m_20">
+                <h4>配送について</h4>
+                <ul>
+                    <li>商品は日本郵便（JP）にてお送りします。<br>
+                    交通事情や天候などにより、ご指定いただいた希望日にお届けができない場合もあります。予めご了承ください。<br><br>
+                    ※ご指定の無い場合は最短でお届けします。<br>
+                    出荷倉庫に在庫がある場合に限り、平日（土日祝日除く）AM 10時迄のご注文で当日発送いたします。<br><br>
+                    ワインセラー、ワインオープナー名前入れはご注文後、ご相談の上お届け日をお伝えさせていただきます。<br><br>
+                        商品代金以外にかかる料金として、送料、チルドゆうパック料金、振込手数料(銀行振込の場合)がございます。</li>
+                </ul>
+            </div>
+            <div class="col-xs-12">
+                <h4>返品・交換について</h4>
+                <ul>
+                    <li>お客様の都合による返品は受け付けておりませんが、不良品と見られる商品については、お届けから3日間以内に電話かメールにてご連絡ください。<br><br>
+                    返送先：<br>合同会社addonem<br>〒581-0072<br>大阪府八尾市久宝寺1-2-58</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-12 text-center m_30">
+            <p class="txt">20歳未満の飲酒は法律で禁止されています。</p>
+            </div>
+    </div>
+</div>

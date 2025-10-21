@@ -24,6 +24,8 @@ services:
         condition: service_started
     volumes:
       - ./:/var/www/html
+    env_file:
+      - .env # ← デフォルトは本番
     environment:
       DATABASE_URL: "mysql://eccube:eccube@db:3306/eccube"
       MAILER_DSN: "smtp://mailcatcher:1025"

@@ -1,0 +1,27 @@
+<section class="container cf m_20">
+    <div class="row">
+        {% if Product.ProductCategories is not empty %}
+        {% for ProductCategory in Product.ProductCategories %}
+        {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+        {% for Category in ProductCategory.Category.path %}
+        {% if Category.id != 62 %}
+        <div class="col-8 offset-2 col-md-3 offset-md-0">
+            <img src="{{ asset('/html/user_data/upload/img/logo/p_brand19.gif') }}" alt="{{ Category.name }}" style="width: 100%;">
+        </div>
+        <div class="col-12 col-md-9">
+            <h3 class="ltx_15 tx_bld">
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}" title="{{ Category.name }}">{{ Category.name }}</a>
+            </h3>
+            <h3 class="ltx_15 tx_bld">
+老舗のプレミアム・ワインの生産者</h3>
+            <p class="m_5">1692年設立の南アフリカを代表する老舗かつプレミアム・ワインの生産者。 ワイン作りのコンセプトは、「他にはない、ずば抜けて高品質なワインを作ること」。<br>
+南アフリカの生物多様性保護プログラム（BWI）にも参加し、環境にも配慮した経営を行っており、また、社会貢献活動としてPEBBLES（ペブルス：南アフリカの子供の教育支援団体（NGO））の支援も行っている。</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+    </div>
+</section><!-- / .goodsBrandArea cf m_20 -->

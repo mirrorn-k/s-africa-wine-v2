@@ -1,0 +1,25 @@
+<section class="container cf m_20">
+    <div class="row">
+        {% if Product.ProductCategories is not empty %}
+        {% for ProductCategory in Product.ProductCategories %}
+        {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+        {% for Category in ProductCategory.Category.path %}
+        {% if Category.id != 62 %}
+        <div class="col-8 offset-2 col-md-3 offset-md-0">
+            <img src="{{ asset('/html/user_data/upload/img/logo/p_brand39.jpg') }}" alt="{{ Category.name }}" style="width: 100%;">
+        </div>
+        <div class="col-12 col-md-9">
+            <h3 class="ltx_15 tx_bld">
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}" title="{{ Category.name }}">{{ Category.name }}</a>
+            </h3>
+            <h3 class="ltx_15 tx_bld">ブドウ本来の美味しさとテロワールを表現するアーティスト</h3>
+            <p class="m_5">冷涼地区エルギンで標高約３００ｍの所に畑を持つ。醸造家キャサリンは、これまで南アフリカ国内のいくつかの優良ワイナリーの下で醸造に携わり、国内外の数多くのメダルを受賞、プラッター（南アフリカワインの評価本の権威。最大５星評価）で５星も獲得してきた。その後、自身のワインを作るために1996年に独立し、エルギンに小さなワイナリーを開いた。<br>彼女は、これまでの経験と、エルギンの土壌を把握した理論派的な醸造家。また、可能な限りナチュラルなアプローチで醸造する不干渉主義者（ミニマリスト）でもある。モットーは、それぞれの畑や土壌の特徴、ブドウ本来の美味しさをそのままワインに表現するテロワール主義。</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+    </div>
+</section><!-- / .goodsBrandArea cf m_20 -->

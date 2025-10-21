@@ -1,0 +1,26 @@
+<section class="container cf m_20">
+    <div class="row">
+        {% if Product.ProductCategories is not empty %}
+        {% for ProductCategory in Product.ProductCategories %}
+        {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+        {% for Category in ProductCategory.Category.path %}
+        {% if Category.id != 62 %}
+        <div class="col-8 offset-2 col-md-3 offset-md-0">
+            <img src="{{ asset('/html/user_data/upload/img/logo/p_reyneke1.jpg') }}" alt="{{ Category.name }}" style="width: 100%;">
+        </div>
+        <div class="col-12 col-md-9">
+            <h3 class="ltx_15 tx_bld">
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}" title="{{ Category.name }}">{{ Category.name }}</a>
+            </h3>
+            <h3 class="ltx_15 tx_bld">
+南アフリカで最初にビオディナミ認証を取得</h3>
+            <p class="m_5">ステレンボシュの南西、フォルス湾から数キロメートルという冷涼で、ステレンボシュの街やフォルス湾が見渡せる標高250-350ｍの小高い丘にある（20ha）。畑は海からの冷涼な風が通り、斜面は北、東、南方向にある。土壌は古い砂岩質で、表面には花崗岩や粘土もある。ブドウの樹齢は古く、約40年。<br>1998年に現在のオーナー、ヨハン・ライナカが母親から農園を引き継ぎ、徐々にオーガニック、ビオディナミ農法に変更していった。２００４年、南アフリカで最初のビオディナミ・ワイナリーとして認証を取得。<br>ヨハンは、南アフリカ・ワイン業界のビオディナミ農法の第一人者で、ストイックで哲学者のような人柄。「科学的な物を使用している限り、ワインで本当のテロワールは表現できない。土が活き活きとしてこそ、ワインからテロワールを感じることが出来る。」と。</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+    </div>
+</section><!-- / .goodsBrandArea cf m_20 -->

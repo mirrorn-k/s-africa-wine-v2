@@ -1,0 +1,150 @@
+{#
+This file is part of EC-CUBE
+
+Copyright(c) EC-CUBE CO.,LTD. All Rights Reserved.
+
+http://www.ec-cube.co.jp/
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+#}
+{% set Categories = repository('Eccube\\Entity\\Category').getList() %}
+
+{% macro tree(Category) %}
+{% from _self import tree %}
+<a href="{{ url('product_list') }}?category_id={{ Category.id }}">
+    {{ Category.name }}
+</a>
+{% if Category.children|length > 0 %}
+<ul>
+    {% for ChildCategory in Category.children %}
+    <li>
+        {{ tree(ChildCategory) }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endmacro %}
+
+{# @see https://github.com/bolt/bolt/pull/2388 #}
+{% from _self import tree %}
+
+<div class="ec-headerCategoryArea">
+    <div class="ec-headerCategoryArea__heading">
+        <p>{{ 'カテゴリ一覧'|trans }}</p>
+    </div>
+    <div class="ec-itemNav">
+        <ul class="ec-itemNav__nav">
+            <!--{% for Category in Categories %}
+                <li>
+                    {{ tree(Category) }}
+                </li>
+            {% endfor %}-->
+            <li>
+                <a href="{{ url(eccube_config.eccube_user_data_route, {'route': 'winery'}) }}"><span>{{ 'ワイナリーから探す'|trans }}</span></a>
+            </li>
+            <li>
+                <a href="{{ url('product_list') }}?category_id=27"><span>{{ '赤ワイン'|trans }}</span></a>
+                <ul>
+                    <li><a href="{{ url('product_list') }}?category_id=35"><span>{{ 'フルボディ'|trans }}</span></a>
+                    </li>
+                    <li><a href="{{ url('product_list') }}?category_id=47"><span>{{ 'ミディアムボディ'|trans }}</span></a>
+                    </li>
+                    <!--<li><a href="{{ url('product_list') }}?category_id=36"><span>{{ 'ライトボディ'|trans }}</span></a>
+                    </li>-->
+                </ul>
+            </li>
+            <li>
+                <a href="{{ url('product_list') }}?category_id=28"><span>{{ '白ワイン'|trans }}</span></a>
+                <ul>
+                    <li><a href="{{ url('product_list') }}?category_id=37"><span>{{ '辛口'|trans }}</span></a>
+                    </li>
+                    <li><a href="{{ url('product_list') }}?category_id=56"><span>{{ '中辛口'|trans }}</span></a>
+                    </li>
+                    <!--<li><a href="{{ url('product_list') }}?category_id=55"><span>{{ 'やや甘口'|trans }}</span></a>
+                    </li>-->
+                    <li><a href="{{ url('product_list') }}?category_id=38"><span>{{ '甘口'|trans }}</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="{{ url('product_list') }}?category_id=29"><span>{{ 'ロゼワイン'|trans }}</span></a>
+                <ul>
+                    <li><a href="{{ url('product_list') }}?category_id=50"><span>{{ '辛口'|trans }}</span></a>
+                    </li>
+                    <li><a href="{{ url('product_list') }}?category_id=54"><span>{{ '中辛口'|trans }}</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="{{ url('product_list') }}?category_id=39"><span>{{ 'スパークリングワイン'|trans }}</span></a>
+                <ul>
+                    <!--<li><a href="{{ url('product_list') }}?category_id=40"><span>{{ '赤'|trans }}</span></a>
+                    </li>-->
+                    <li><a href="{{ url('product_list') }}?category_id=41"><span>{{ '白'|trans }}</span></a>
+                        <ul>
+                            <!--<li><a href="{{ url('product_list') }}?category_id=58"><span>{{ '辛口'|trans }}</span></a>
+                            </li>
+                            <li><a href="{{ url('product_list') }}?category_id=59"><span>{{ '中辛口'|trans }}</span></a>
+                            </li>
+                            <li><a href="{{ url('product_list') }}?category_id=60"><span>{{ 'やや甘口'|trans }}</span></a>
+                            </li>
+                            <li><a href="{{ url('product_list') }}?category_id=61"><span>{{ '甘口'|trans }}</span></a>
+                            </li>-->
+                        </ul>
+                    </li>
+                    <li><a href="{{ url('product_list') }}?category_id=57"><span>{{ 'ロゼ'|trans }}</span></a>
+                        <ul>
+                            <!--<li><a href="{{ url('product_list') }}?category_id=66"><span>{{ '辛口'|trans }}</span></a>
+                            </li>
+                            <li><a href="{{ url('product_list') }}?category_id=65"><span>{{ '中辛口'|trans }}</span></a>
+                            </li>
+                            <li><a href="{{ url('product_list') }}?category_id=64"><span>{{ 'やや甘口'|trans }}</span></a>
+                            </li>
+                            <li><a href="{{ url('product_list') }}?category_id=63"><span>{{ '甘口'|trans }}</span></a>
+                            </li>-->
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="{{ url('product_list') }}?category_id=53"><span>{{ 'セット商品'|trans }}</span></a>
+            </li>
+            <li>
+                <a href="{{ url('product_list') }}?category_id=52"><span>{{ '料理から探す'|trans }}</span></a>
+                <ul>
+                    <li><a href="{{ url('product_list') }}?category_id=67"><span>{{ '牛肉料理'|trans }}</span></a>
+                    </li>
+                    <li><a href="{{ url('product_list') }}?category_id=68"><span>{{ '豚肉料理'|trans }}</span></a>
+                    </li>
+                    <li><a href="{{ url('product_list') }}?category_id=69"><span>{{ '鶏肉料理'|trans }}</span></a>
+                    </li>
+                    <li><a href="{{ url('product_list') }}?category_id=70"><span>{{ '赤身魚'|trans }}</span></a>
+                    </li>
+                    <li><a href="{{ url('product_list') }}?category_id=71"><span>{{ '白身魚'|trans }}</span></a>
+                    </li>
+                    <li><a href="{{ url('product_list') }}?category_id=72"><span>{{ 'カニ・エビ'|trans }}</span></a>
+                    </li>
+                    <li><a href="{{ url('product_list') }}?category_id=73"><span>{{ '貝類'|trans }}</span></a>
+                    </li>
+                    <li><a href="{{ url('product_list') }}?category_id=74"><span>{{ 'パスタ'|trans }}</span></a>
+                    </li>
+                    <li><a href="{{ url('product_list') }}?category_id=75"><span>{{ 'ブルーチーズ'|trans }}</span></a>
+                    </li>
+                </ul>
+
+            </li>
+            <li>
+                <a href="{{ url('product_list') }}?category_id=51"><span>{{ 'ワイン関連商品'|trans }}</span></a>
+                <ul>
+                    <!--<li><a href="{{ url('product_list') }}?category_id=79"><span>{{ 'ワイングラス'|trans }}</span></a>
+                    </li>-->
+                    <li><a href="{{ url('product_list') }}?category_id=76"><span>{{ 'ワインオープナー'|trans }}</span></a>
+                    </li>
+                    <li><a href="{{ url('product_list') }}?category_id=78"><span>{{ 'ワインセラー'|trans }}</span></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

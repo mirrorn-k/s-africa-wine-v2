@@ -1,0 +1,27 @@
+<section class="container cf m_20">
+    <div class="row">
+        {% if Product.ProductCategories is not empty %}
+        {% for ProductCategory in Product.ProductCategories %}
+        {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+        {% for Category in ProductCategory.Category.path %}
+        {% if Category.id != 62 %}
+        <div class="col-8 offset-2 col-md-3 offset-md-0">
+            <img src="{{ asset('/html/user_data/upload/img/logo/p_brand29.gif') }}" alt="{{ Category.name }}" style="width: 100%;">
+        </div>
+        <div class="col-12 col-md-9">
+            <h3 class="ltx_15 tx_bld">
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}" title="{{ Category.name }}">{{ Category.name }}</a>
+            </h3>
+            <h3 class="ltx_15 tx_bld">
+南アフリカの超名門。冷涼地区のエレガントワイン</h3>
+            <p class="m_5">ラステンバーグのワイン醸造の歴史は1682年にまで遡ります。<br>
+南アフリカを代表するワイン産地ステレンボッシュの北部に位置し、北東のシモンズバーグと南側のエルダーバーグの斜面にワイン畑が広がります。ステレンボッシュの中でも標高 （180～450ｍ）の高い冷涼な畑で栽培されたブドウで造られるワインは、エレガントで綺麗なスタイルでありしっかりとした酸が特徴のワイナリーです。</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+    </div>
+</section><!-- / .goodsBrandArea cf m_20 -->

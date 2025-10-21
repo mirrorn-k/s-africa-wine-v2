@@ -1,0 +1,26 @@
+<section class="container cf m_20">
+    <div class="row">
+        {% if Product.ProductCategories is not empty %}
+        {% for ProductCategory in Product.ProductCategories %}
+        {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+        {% for Category in ProductCategory.Category.path %}
+        {% if Category.id != 62 %}
+        <div class="col-8 offset-2 col-md-3 offset-md-0">
+            <img src="{{ asset('/html/user_data/upload/img/logo/p_longridge1.jpg') }}" alt="{{ Category.name }}" style="width: 100%;">
+        </div>
+        <div class="col-12 col-md-9">
+            <h3 class="ltx_15 tx_bld">
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}" title="{{ Category.name }}">{{ Category.name }}</a>
+            </h3>
+            <h3 class="ltx_15 tx_bld">
+人も環境も皆健康であることがコンセプト！オーガニック＆ビオディナミ生産者</h3>
+            <p class="m_5">ロングリッジは、ステレンボシュの南側、ヘルダーバーグ山脈の斜面に位置している。この地域は、他のステレンボシュ地区より２－３度気温が低い。年間降水量800ｍｌ。土壌は、花崗岩質の下に鉄分の多い粘土質があり、これによって保湿性があるが、必要な年には灌漑できるようにしているという理想的な環境。<br>この恵まれた場所で、自然農法で多くの受賞ワインを生み出している。<br>ロングリッジが目指すのは、シンプルに、ユニークで、テロワール主義、オーガニック農法で、人も環境も皆、健康であること、そして楽しめるワインでワールドクラスであること。</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+    </div>
+</section><!-- / .goodsBrandArea cf m_20 -->
