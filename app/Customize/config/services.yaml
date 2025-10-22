@@ -1,0 +1,23 @@
+services:
+  Customize\Service\DiscountService:
+    arguments:
+      $conn: "@doctrine.dbal.default_connection"
+
+  Customize\Twig\Extension\DiscountExtension:
+    arguments:
+      $security: "@security.helper"
+      $discountService: '@Customize\Service\DiscountService'
+    tags:
+      - { name: twig.extension }
+  Customize\EventListener\CustomerRegisterListener:
+    tags:
+      - { name: kernel.event_subscriber }
+  Customize\EventListener\AdminNavListener:
+    class: Customize\EventListener\AdminNavListener
+    public: true
+    tags:
+      - {
+          name: kernel.event_listener,
+          event: 'Eccube\Event\EccubeEvents::ADMIN_NAV_INITIALIZE',
+          method: onAdminNavInitialize,
+        }

@@ -33,6 +33,8 @@ if (!class_exists('\Eccube\Entity\Customer')) {
      */
     class Customer extends \Eccube\Entity\AbstractEntity implements UserInterface, PasswordAuthenticatedUserInterface, LegacyPasswordAuthenticatedUserInterface, \Serializable
     {
+        use \Customize\Entity\CustomerTrait;
+
         /**
          * @var int
          *

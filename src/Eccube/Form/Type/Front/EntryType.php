@@ -73,17 +73,20 @@ class EntryType extends AbstractType
             ->add('postal_code', PostalType::class)
             ->add('address', AddressType::class)
             ->add('phone_number', PhoneNumberType::class, [
-                'required' => true,
+                'required' =>false,
             ])
             ->add('email', RepeatedEmailType::class)
             ->add('plain_password', RepeatedPasswordType::class)
             ->add('birth', BirthdayType::class, [
-                'required' => false,
+                'required' => true,
                 'input' => 'datetime',
                 'years' => range(date('Y'), date('Y') - $this->eccubeConfig['eccube_birth_max']),
                 'widget' => 'choice',
                 'placeholder' => ['year' => '----', 'month' => '--', 'day' => '--'],
                 'constraints' => [
+                    new Assert\NotBlank([
+                        'message' => '生年月日は必須です。',
+                    ]),
                     new Assert\LessThanOrEqual([
                         'value' => date('Y-m-d', strtotime('-1 day')),
                         'message' => 'form_error.select_is_future_or_now_date',

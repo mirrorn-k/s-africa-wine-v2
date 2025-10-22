@@ -54,13 +54,16 @@ parameters:
                 customer_edit:
                     name: admin.customer.customer_registration
                     url: admin_customer_new
+                customer_rank:
+                    name: 会員ランク管理
+                    url: admin_customer_rank_index
         content:
             name: admin.content.contents_management
             icon: fa-file-text-o
             children:
                 news:
                     name: admin.content.news_management
-                    url : admin_content_news
+                    url: admin_content_news
                 file:
                     name: admin.content.file_management
                     url: admin_content_file
@@ -101,7 +104,11 @@ parameters:
                         shop_agreement:
                             name: admin.setting.shop.agreement_setting
                             url: admin_content_page_edit
-                            param: { id: !php/const Eccube\Entity\Page::AGREEMENT_PAGE_ID, return: agreement }
+                            param:
+                                {
+                                    id: !php/const Eccube\Entity\Page::AGREEMENT_PAGE_ID,
+                                    return: agreement,
+                                }
                         shop_payment:
                             name: admin.setting.shop.payment_setting
                             url: admin_setting_shop_payment

@@ -1,0 +1,25 @@
+{% extends '@admin/default_frame.twig' %}
+
+{% set menus = ['customer', 'customer_rank'] %}
+{% block sub_title %}{{ 'admin.customer.customer_management'|trans }}{% endblock %}
+{% block title %}会員ランク登録{% endblock %}
+
+{% block main %}
+<div class="c-container">
+  {{ form_start(form) }}
+  <div class="row mb-3">
+    <div class="col-md-6">
+      {{ form_row(form.code) }}
+      {{ form_row(form.name) }}
+      {{ form_row(form.discount_rate) }}
+      {{ form_row(form.sort_no) }}
+    </div>
+  </div>
+
+  <div class="c-footer">
+    <button type="submit" class="btn btn-primary">保存</button>
+    <a href="{{ url('admin_customer_rank_index') }}" class="btn btn-secondary">戻る</a>
+  </div>
+  {{ form_end(form) }}
+</div>
+{% endblock %}

@@ -236,7 +236,12 @@ http://www.ec-cube.co.jp/
                                 </p>
                             </a>
 
-                            {# {{ include('Product/customer_price_list.twig') }} #}
+                            {% if is_granted('ROLE_USER') %}
+                                <p class="fw-bold text-danger">
+                                    {{ rank_label() }}価格：{{ discount_price(Product)|price }}
+                                    <small>（{{ (discount_rate() * 100)|number_format(0) }}%OFF）</small>
+                                </p>
+                            {% endif %}
 
                             {% if Product.stock_find %}
                                 {% set form = forms[Product.id] %}
