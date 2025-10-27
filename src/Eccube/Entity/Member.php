@@ -20,6 +20,8 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
+use Plugin\SiteKit42\Entity\MemberTrait as SiteKitMemberTrait;
+
 
 if (!class_exists('\Eccube\Entity\Member')) {
     /**
@@ -32,7 +34,7 @@ if (!class_exists('\Eccube\Entity\Member')) {
      * @ORM\Entity(repositoryClass="Eccube\Repository\MemberRepository")
      */
     class Member extends \Eccube\Entity\AbstractEntity implements UserInterface, PasswordAuthenticatedUserInterface, LegacyPasswordAuthenticatedUserInterface, \Serializable
-    {
+    {   
         public static function loadValidatorMetadata(ClassMetadata $metadata)
         {
             $metadata->addConstraint(new UniqueEntity([

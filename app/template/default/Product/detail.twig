@@ -226,16 +226,19 @@ file that was distributed with this source code.
                         {% endfor %}
                     </div>
 
- {% set hasCategory = false %}
- {% for ProductCategory in Product.ProductCategories %}
-      {% if ProductCategory.Category.id == 51 or Category.id == empty %}
-         {% set hasCategory = true %}
-      {% endif %}
- {% endfor %}
- {% if hasCategory %}
-{% else %}
-            <small>※商品画像のヴィンテージと実際のヴィンテージが違う場合がございます。</small>
-{% endif %}
+                    {% set hasCategory = false %}
+                    {% for ProductCategory in Product.ProductCategories %}
+                        {% if ProductCategory.Category.id == 51 %}
+                            {% set hasCategory = true %}
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if hasCategory %}
+                    {# カテゴリID 51 の商品 #}
+                    {% else %}
+                        <small>※商品画像のヴィンテージと実際のヴィンテージが違う場合がございます。</small>
+                    {% endif %}
+
                 </div>
             </div>
             <div class="ec-grid2__cell">
@@ -290,7 +293,6 @@ file that was distributed with this source code.
                         {% endif %}
                     </div>
                     {# 商品コード #}
-                    {{ include('Product/customer_price_detail.twig') }}
                     {% if BaseInfo.option_favorite_product %}
                         <form action="{{ url('product_add_favorite', {id:Product.id}) }}" method="post">
                             <div class="fr">
@@ -377,11 +379,11 @@ file that was distributed with this source code.
                     </div>
                 </div>
             </div>
-        </div>
-    <div class="freearea">
-        {% if Product.freearea %}
-                 {{ include(template_from_string(Product.freearea)) }}
-        {% endif %}
+        </div>  
+        <div class="freearea">
+            {% if Product.freearea %}
+                {{ include(template_from_string(Product.freearea)) }}
+            {% endif %}
         </div>
     </div>
 {% endblock %}

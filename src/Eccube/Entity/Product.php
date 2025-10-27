@@ -15,6 +15,8 @@ namespace Eccube\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Plugin\RelatedProduct42\Entity\ProductTrait as RelatedProductTrait;
+
 
 if (!class_exists('\Eccube\Entity\Product')) {
     /**
@@ -28,6 +30,8 @@ if (!class_exists('\Eccube\Entity\Product')) {
      */
     class Product extends \Eccube\Entity\AbstractEntity
     {
+        use RelatedProductTrait;
+
         private $_calc = false;
         private $stockFinds = [];
         private $stocks = [];
@@ -1073,5 +1077,46 @@ if (!class_exists('\Eccube\Entity\Product')) {
         {
             return $this->Status;
         }
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $origin;
+
+    /**
+     * @ORM\Column(type="string", length=50, nullable=true)
+     */
+    private $alcohol;
+
+    /**
+     * @ORM\Column(type="string", length=50, nullable=true)
+     */
+    private $capacity;
+
+    /**
+     * @ORM\Column(type="string", length=50, nullable=true)
+     */
+    private $vintage;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $award;
+
+    // === Getter / Setter ===
+    public function getOrigin(): ?string { return $this->origin; }
+    public function setOrigin(?string $origin): self { $this->origin = $origin; return $this; }
+
+    public function getAlcohol(): ?string { return $this->alcohol; }
+    public function setAlcohol(?string $alcohol): self { $this->alcohol = $alcohol; return $this; }
+
+    public function getCapacity(): ?string { return $this->capacity; }
+    public function setCapacity(?string $capacity): self { $this->capacity = $capacity; return $this; }
+
+    public function getVintage(): ?string { return $this->vintage; }
+    public function setVintage(?string $vintage): self { $this->vintage = $vintage; return $this; }
+
+    public function getAward(): ?string { return $this->award; }
+    public function setAward(?string $award): self { $this->award = $award; return $this; }
     }
 }

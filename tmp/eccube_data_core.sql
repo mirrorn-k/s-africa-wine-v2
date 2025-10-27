@@ -509,3 +509,135 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2025-10-20  3:55:35
+
+
+
+/* ここから追加 */
+
+
+LOCK TABLES `dtb_page_layout` WRITE;
+/*!40000 ALTER TABLE `dtb_page_layout` DISABLE KEYS */;
+INSERT INTO `dtb_page_layout` VALUES (0,0,2,'pagelayout'),(1,1,41,'pagelayout'),(2,2,41,'pagelayout'),(3,2,41,'pagelayout'),(4,2,6,'pagelayout'),(5,2,7,'pagelayout'),(6,2,8,'pagelayout'),(7,2,36,'pagelayout'),(8,2,37,'pagelayout'),(9,2,9,'pagelayout'),(10,2,10,'pagelayout'),(11,2,11,'pagelayout'),(12,2,12,'pagelayout'),(13,2,14,'pagelayout'),(14,2,41,'pagelayout'),(15,2,15,'pagelayout'),(16,2,16,'pagelayout'),(17,2,17,'pagelayout'),(18,2,41,'pagelayout'),(19,2,33,'pagelayout'),(20,2,19,'pagelayout'),(21,2,41,'pagelayout'),(22,2,21,'pagelayout'),(23,2,41,'pagelayout'),(24,2,22,'pagelayout'),(25,2,34,'pagelayout'),(28,35,41,'pagelayout'),(29,2,41,'pagelayout'),(30,2,25,'pagelayout'),(31,2,26,'pagelayout'),(32,2,27,'pagelayout'),(33,2,28,'pagelayout'),(34,2,29,'pagelayout'),(35,2,30,'pagelayout'),(36,2,31,'pagelayout'),(37,2,32,'pagelayout'),(38,2,39,'pagelayout'),(42,2,38,'pagelayout'),(44,2,40,'pagelayout'),(45,2,41,'pagelayout'),(46,2,41,'pagelayout'),(47,2,41,'pagelayout');
+/*!40000 ALTER TABLE `dtb_page_layout` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+
+LOCK TABLES `dtb_block_position` WRITE;
+/*!40000 ALTER TABLE `dtb_block_position` DISABLE KEYS */;
+INSERT INTO `dtb_block_position` VALUES (1,43,0,1,'blockposition'),(1,43,35,1,'blockposition'),(1,43,37,1,'blockposition'),(1,43,38,0,'blockposition'),(1,43,39,0,'blockposition'),(1,43,40,0,'blockposition'),(1,43,41,0,'blockposition'),(1,43,42,0,'blockposition'),(1,43,43,0,'blockposition'),(1,43,44,0,'blockposition'),(1,43,45,0,'blockposition'),(1,43,46,0,'blockposition'),(1,43,47,0,'blockposition'),(1,43,48,0,'blockposition'),(1,43,49,0,'blockposition'),(1,43,50,0,'blockposition'),(1,43,51,0,'blockposition'),(1,43,52,0,'blockposition'),(1,43,53,0,'blockposition'),(1,43,54,0,'blockposition'),(1,43,55,0,'blockposition'),(1,43,56,0,'blockposition'),(1,43,57,0,'blockposition'),(1,43,58,0,'blockposition'),(1,43,59,0,'blockposition'),(1,43,60,0,'blockposition'),(1,43,61,0,'blockposition'),(1,44,0,0,'blockposition'),(1,44,1,0,'blockposition'),(1,44,2,0,'blockposition'),(1,44,3,0,'blockposition'),(1,44,4,0,'blockposition'),(1,44,6,0,'blockposition'),(1,44,7,0,'blockposition'),(1,44,8,0,'blockposition'),(1,44,9,0,'blockposition'),(1,44,10,0,'blockposition'),(1,44,11,0,'blockposition'),(1,44,13,0,'blockposition'),(1,44,14,0,'blockposition'),(1,44,15,0,'blockposition'),(1,44,17,0,'blockposition'),(1,44,18,0,'blockposition'),(1,44,19,0,'blockposition'),(1,44,20,0,'blockposition'),(1,44,23,0,'blockposition'),(1,44,24,0,'blockposition'),(1,44,25,0,'blockposition'),(1,44,26,0,'blockposition'),(1,44,27,0,'blockposition'),(1,44,29,0,'blockposition'),(1,44,30,0,'blockposition'),(1,44,31,0,'blockposition'),(1,44,32,0,'blockposition'),(1,44,34,0,'blockposition'),(1,44,35,0,'blockposition'),(1,44,36,0,'blockposition'),(1,44,37,0,'blockposition'),(1,44,38,1,'blockposition'),(1,44,39,1,'blockposition'),(1,44,40,1,'blockposition'),(1,44,41,1,'blockposition'),(1,44,42,1,'blockposition'),(1,44,43,1,'blockposition'),(1,44,44,1,'blockposition'),(1,44,45,1,'blockposition'),(1,44,46,1,'blockposition'),(1,44,47,1,'blockposition'),(1,44,48,1,'blockposition'),(1,44,49,1,'blockposition'),(1,44,50,1,'blockposition'),(1,44,51,1,'blockposition'),(1,44,52,1,'blockposition'),(1,44,53,1,'blockposition'),(1,44,54,1,'blockposition'),(1,44,55,1,'blockposition'),(1,44,56,1,'blockposition'),(1,44,57,1,'blockposition'),(1,44,58,1,'blockposition'),(1,44,59,1,'blockposition'),(1,44,60,1,'blockposition'),(1,44,61,1,'blockposition'),(3,3,0,2,'blockposition'),(3,3,1,2,'blockposition'),(3,3,2,2,'blockposition'),(3,3,3,2,'blockposition'),(3,3,4,2,'blockposition'),(3,3,6,2,'blockposition'),(3,3,7,2,'blockposition'),(3,3,8,2,'blockposition'),(3,3,9,1,'blockposition'),(3,3,10,1,'blockposition'),(3,3,11,2,'blockposition'),(3,3,13,2,'blockposition'),(3,3,14,2,'blockposition'),(3,3,15,2,'blockposition'),(3,3,17,2,'blockposition'),(3,3,18,2,'blockposition'),(3,3,19,2,'blockposition'),(3,3,20,2,'blockposition'),(3,3,23,2,'blockposition'),(3,3,24,2,'blockposition'),(3,3,25,2,'blockposition'),(3,3,26,2,'blockposition'),(3,3,27,2,'blockposition'),(3,3,29,2,'blockposition'),(3,3,30,2,'blockposition'),(3,3,31,2,'blockposition'),(3,3,32,2,'blockposition'),(3,3,34,2,'blockposition'),(3,3,35,2,'blockposition'),(3,3,36,2,'blockposition'),(3,7,0,1,'blockposition'),(3,7,1,1,'blockposition'),(3,7,2,1,'blockposition'),(3,7,3,1,'blockposition'),(3,7,4,1,'blockposition'),(3,7,6,1,'blockposition'),(3,7,7,1,'blockposition'),(3,7,8,1,'blockposition'),(3,7,9,2,'blockposition'),(3,7,10,2,'blockposition'),(3,7,11,1,'blockposition'),(3,7,13,1,'blockposition'),(3,7,14,1,'blockposition'),(3,7,15,1,'blockposition'),(3,7,17,1,'blockposition'),(3,7,18,1,'blockposition'),(3,7,19,1,'blockposition'),(3,7,20,1,'blockposition'),(3,7,23,1,'blockposition'),(3,7,24,1,'blockposition'),(3,7,25,1,'blockposition'),(3,7,26,1,'blockposition'),(3,7,27,1,'blockposition'),(3,7,29,1,'blockposition'),(3,7,30,1,'blockposition'),(3,7,31,1,'blockposition'),(3,7,32,1,'blockposition'),(3,7,34,1,'blockposition'),(3,7,35,1,'blockposition'),(3,7,36,1,'blockposition'),(3,7,37,1,'blockposition'),(3,7,38,1,'blockposition'),(3,7,39,1,'blockposition'),(3,7,40,1,'blockposition'),(3,7,41,1,'blockposition'),(3,7,42,1,'blockposition'),(3,7,43,1,'blockposition'),(3,7,44,1,'blockposition'),(3,7,45,1,'blockposition'),(3,7,46,1,'blockposition'),(3,7,47,1,'blockposition'),(3,7,48,1,'blockposition'),(3,7,49,1,'blockposition'),(3,7,50,1,'blockposition'),(3,7,51,1,'blockposition'),(3,7,52,1,'blockposition'),(3,7,53,1,'blockposition'),(3,7,54,1,'blockposition'),(3,7,55,1,'blockposition'),(3,7,56,1,'blockposition'),(3,7,57,1,'blockposition'),(3,7,58,1,'blockposition'),(3,7,59,1,'blockposition'),(3,7,60,1,'blockposition'),(3,7,61,1,'blockposition'),(3,10,0,0,'blockposition'),(3,10,1,0,'blockposition'),(3,10,2,0,'blockposition'),(3,10,18,0,'blockposition'),(3,10,35,0,'blockposition'),(3,10,36,0,'blockposition'),(3,48,1,3,'blockposition'),(3,48,2,3,'blockposition'),(3,48,30,3,'blockposition'),(3,48,35,3,'blockposition'),(3,48,36,3,'blockposition'),(3,49,3,0,'blockposition'),(3,49,4,0,'blockposition'),(3,49,6,0,'blockposition'),(3,49,7,0,'blockposition'),(3,49,8,0,'blockposition'),(3,49,9,0,'blockposition'),(3,49,10,0,'blockposition'),(3,49,11,0,'blockposition'),(3,49,13,0,'blockposition'),(3,49,14,0,'blockposition'),(3,49,15,0,'blockposition'),(3,49,17,0,'blockposition'),(3,49,19,0,'blockposition'),(3,49,20,0,'blockposition'),(3,49,23,0,'blockposition'),(3,49,24,0,'blockposition'),(3,49,25,0,'blockposition'),(3,49,26,0,'blockposition'),(3,49,27,0,'blockposition'),(3,49,29,0,'blockposition'),(3,49,30,0,'blockposition'),(3,49,31,0,'blockposition'),(3,49,32,0,'blockposition'),(3,49,34,0,'blockposition'),(3,49,37,0,'blockposition'),(3,49,38,0,'blockposition'),(3,49,39,0,'blockposition'),(3,49,40,0,'blockposition'),(3,49,41,0,'blockposition'),(3,49,42,0,'blockposition'),(3,49,43,0,'blockposition'),(3,49,44,0,'blockposition'),(3,49,45,0,'blockposition'),(3,49,46,0,'blockposition'),(3,49,47,0,'blockposition'),(3,49,48,0,'blockposition'),(3,49,49,0,'blockposition'),(3,49,50,0,'blockposition'),(3,49,51,0,'blockposition'),(3,49,52,0,'blockposition'),(3,49,53,0,'blockposition'),(3,49,54,0,'blockposition'),(3,49,55,0,'blockposition'),(3,49,56,0,'blockposition'),(3,49,57,0,'blockposition'),(3,49,58,0,'blockposition'),(3,49,59,0,'blockposition'),(3,49,60,0,'blockposition'),(3,49,61,0,'blockposition'),(7,2,1,1,'blockposition'),(7,12,1,0,'blockposition'),(7,15,3,0,'blockposition'),(7,15,37,0,'blockposition'),(7,16,4,0,'blockposition'),(7,16,38,0,'blockposition'),(7,18,6,0,'blockposition'),(7,18,39,0,'blockposition'),(7,19,7,0,'blockposition'),(7,19,40,0,'blockposition'),(7,20,8,0,'blockposition'),(7,20,41,0,'blockposition'),(7,21,9,0,'blockposition'),(7,21,42,0,'blockposition'),(7,22,10,0,'blockposition'),(7,22,43,0,'blockposition'),(7,23,11,0,'blockposition'),(7,23,44,0,'blockposition'),(7,24,13,0,'blockposition'),(7,24,45,0,'blockposition'),(7,25,14,0,'blockposition'),(7,25,46,0,'blockposition'),(7,26,17,0,'blockposition'),(7,26,48,0,'blockposition'),(7,27,15,0,'blockposition'),(7,27,47,0,'blockposition'),(7,28,18,0,'blockposition'),(7,28,49,0,'blockposition'),(7,29,19,0,'blockposition'),(7,29,50,0,'blockposition'),(7,30,20,0,'blockposition'),(7,30,51,0,'blockposition'),(7,31,23,0,'blockposition'),(7,31,52,0,'blockposition'),(7,32,24,0,'blockposition'),(7,32,53,0,'blockposition'),(7,33,25,0,'blockposition'),(7,33,54,0,'blockposition'),(7,34,26,0,'blockposition'),(7,34,55,0,'blockposition'),(7,35,27,0,'blockposition'),(7,35,56,0,'blockposition'),(7,36,29,0,'blockposition'),(7,36,57,0,'blockposition'),(7,37,30,0,'blockposition'),(7,37,58,0,'blockposition'),(7,38,31,0,'blockposition'),(7,38,59,0,'blockposition'),(7,39,32,0,'blockposition'),(7,39,60,0,'blockposition'),(7,40,34,0,'blockposition'),(7,40,61,0,'blockposition'),(9,17,0,0,'blockposition'),(9,17,1,0,'blockposition'),(9,17,2,0,'blockposition'),(9,17,35,0,'blockposition'),(9,17,36,0,'blockposition'),(9,48,3,0,'blockposition'),(9,48,4,0,'blockposition'),(9,48,6,0,'blockposition'),(9,48,7,0,'blockposition'),(9,48,8,0,'blockposition'),(9,48,9,0,'blockposition'),(9,48,10,0,'blockposition'),(9,48,11,0,'blockposition'),(9,48,13,0,'blockposition'),(9,48,14,0,'blockposition'),(9,48,15,0,'blockposition'),(9,48,17,0,'blockposition'),(9,48,18,0,'blockposition'),(9,48,19,0,'blockposition'),(9,48,20,0,'blockposition'),(9,48,23,0,'blockposition'),(9,48,24,0,'blockposition'),(9,48,25,0,'blockposition'),(9,48,26,0,'blockposition'),(9,48,27,0,'blockposition'),(9,48,29,0,'blockposition'),(9,48,31,0,'blockposition'),(9,48,32,0,'blockposition'),(9,48,34,0,'blockposition'),(9,48,37,0,'blockposition'),(9,48,38,0,'blockposition'),(9,48,39,0,'blockposition'),(9,48,40,0,'blockposition'),(9,48,41,0,'blockposition'),(9,48,42,0,'blockposition'),(9,48,43,0,'blockposition'),(9,48,44,0,'blockposition'),(9,48,45,0,'blockposition'),(9,48,46,0,'blockposition'),(9,48,47,0,'blockposition'),(9,48,48,0,'blockposition'),(9,48,49,0,'blockposition'),(9,48,50,0,'blockposition'),(9,48,51,0,'blockposition'),(9,48,52,0,'blockposition'),(9,48,53,0,'blockposition'),(9,48,54,0,'blockposition'),(9,48,55,0,'blockposition'),(9,48,56,0,'blockposition'),(9,48,57,0,'blockposition'),(9,48,58,0,'blockposition'),(9,48,59,0,'blockposition'),(9,48,60,0,'blockposition'),(9,48,61,0,'blockposition'),(10,6,0,0,'blockposition'),(10,6,1,0,'blockposition'),(10,6,2,0,'blockposition'),(10,6,3,0,'blockposition'),(10,6,4,0,'blockposition'),(10,6,6,0,'blockposition'),(10,6,7,0,'blockposition'),(10,6,8,0,'blockposition'),(10,6,9,0,'blockposition'),(10,6,10,0,'blockposition'),(10,6,11,0,'blockposition'),(10,6,13,0,'blockposition'),(10,6,14,0,'blockposition'),(10,6,15,0,'blockposition'),(10,6,17,0,'blockposition'),(10,6,18,0,'blockposition'),(10,6,19,0,'blockposition'),(10,6,20,0,'blockposition'),(10,6,23,0,'blockposition'),(10,6,24,0,'blockposition'),(10,6,25,0,'blockposition'),(10,6,26,0,'blockposition'),(10,6,27,0,'blockposition'),(10,6,29,0,'blockposition'),(10,6,30,0,'blockposition'),(10,6,31,0,'blockposition'),(10,6,32,0,'blockposition'),(10,6,34,0,'blockposition'),(10,6,35,0,'blockposition'),(10,6,36,0,'blockposition'),(10,6,37,0,'blockposition'),(10,6,38,0,'blockposition'),(10,6,39,0,'blockposition'),(10,6,40,0,'blockposition'),(10,6,41,0,'blockposition'),(10,6,42,0,'blockposition'),(10,6,43,0,'blockposition'),(10,6,44,0,'blockposition'),(10,6,45,0,'blockposition'),(10,6,46,0,'blockposition'),(10,6,47,0,'blockposition'),(10,6,48,0,'blockposition'),(10,6,49,0,'blockposition'),(10,6,50,0,'blockposition'),(10,6,51,0,'blockposition'),(10,6,52,0,'blockposition'),(10,6,53,0,'blockposition'),(10,6,54,0,'blockposition'),(10,6,55,0,'blockposition'),(10,6,56,0,'blockposition'),(10,6,57,0,'blockposition'),(10,6,58,0,'blockposition'),(10,6,59,0,'blockposition'),(10,6,60,0,'blockposition'),(10,6,61,0,'blockposition'),(11,4,0,1,'blockposition'),(11,4,1,1,'blockposition'),(11,4,2,1,'blockposition'),(11,4,3,1,'blockposition'),(11,4,4,1,'blockposition'),(11,4,6,1,'blockposition'),(11,4,7,1,'blockposition'),(11,4,8,1,'blockposition'),(11,4,9,1,'blockposition'),(11,4,10,1,'blockposition'),(11,4,11,1,'blockposition'),(11,4,13,1,'blockposition'),(11,4,14,1,'blockposition'),(11,4,15,1,'blockposition'),(11,4,17,2,'blockposition'),(11,4,18,1,'blockposition'),(11,4,19,1,'blockposition'),(11,4,20,1,'blockposition'),(11,4,23,1,'blockposition'),(11,4,24,1,'blockposition'),(11,4,25,1,'blockposition'),(11,4,26,1,'blockposition'),(11,4,27,1,'blockposition'),(11,4,29,1,'blockposition'),(11,4,30,1,'blockposition'),(11,4,31,1,'blockposition'),(11,4,32,1,'blockposition'),(11,4,34,1,'blockposition'),(11,4,35,1,'blockposition'),(11,4,36,1,'blockposition'),(11,4,37,1,'blockposition'),(11,4,38,1,'blockposition'),(11,4,39,1,'blockposition'),(11,4,40,1,'blockposition'),(11,4,41,1,'blockposition'),(11,4,42,1,'blockposition'),(11,4,43,1,'blockposition'),(11,4,44,1,'blockposition'),(11,4,45,1,'blockposition'),(11,4,46,1,'blockposition'),(11,4,47,1,'blockposition'),(11,4,48,1,'blockposition'),(11,4,49,1,'blockposition'),(11,4,50,1,'blockposition'),(11,4,51,1,'blockposition'),(11,4,52,1,'blockposition'),(11,4,53,1,'blockposition'),(11,4,54,1,'blockposition'),(11,4,55,1,'blockposition'),(11,4,56,1,'blockposition'),(11,4,57,1,'blockposition'),(11,4,58,1,'blockposition'),(11,4,59,1,'blockposition'),(11,4,60,1,'blockposition'),(11,4,61,1,'blockposition'),(11,9,0,2,'blockposition'),(11,9,1,2,'blockposition'),(11,9,2,2,'blockposition'),(11,9,3,2,'blockposition'),(11,9,4,2,'blockposition'),(11,9,6,2,'blockposition'),(11,9,7,2,'blockposition'),(11,9,8,2,'blockposition'),(11,9,9,2,'blockposition'),(11,9,10,2,'blockposition'),(11,9,11,2,'blockposition'),(11,9,13,2,'blockposition'),(11,9,14,2,'blockposition'),(11,9,15,2,'blockposition'),(11,9,17,1,'blockposition'),(11,9,18,2,'blockposition'),(11,9,19,2,'blockposition'),(11,9,20,2,'blockposition'),(11,9,23,2,'blockposition'),(11,9,24,2,'blockposition'),(11,9,25,2,'blockposition'),(11,9,26,2,'blockposition'),(11,9,27,2,'blockposition'),(11,9,29,2,'blockposition'),(11,9,30,2,'blockposition'),(11,9,31,2,'blockposition'),(11,9,32,2,'blockposition'),(11,9,34,2,'blockposition'),(11,9,35,2,'blockposition'),(11,9,36,2,'blockposition'),(11,9,37,2,'blockposition'),(11,9,38,2,'blockposition'),(11,9,39,2,'blockposition'),(11,9,40,2,'blockposition'),(11,9,41,2,'blockposition'),(11,9,42,2,'blockposition'),(11,9,43,2,'blockposition'),(11,9,44,2,'blockposition'),(11,9,45,2,'blockposition'),(11,9,46,2,'blockposition'),(11,9,47,2,'blockposition'),(11,9,48,2,'blockposition'),(11,9,49,2,'blockposition'),(11,9,50,2,'blockposition'),(11,9,51,2,'blockposition'),(11,9,52,2,'blockposition'),(11,9,53,2,'blockposition'),(11,9,54,2,'blockposition'),(11,9,55,2,'blockposition'),(11,9,56,2,'blockposition'),(11,9,57,2,'blockposition'),(11,9,58,2,'blockposition'),(11,9,59,2,'blockposition'),(11,9,60,2,'blockposition'),(11,9,61,2,'blockposition'),(11,11,8,0,'blockposition'),(11,13,0,0,'blockposition'),(11,13,1,0,'blockposition'),(11,13,2,0,'blockposition'),(11,13,3,0,'blockposition'),(11,13,4,0,'blockposition'),(11,13,6,0,'blockposition'),(11,13,7,0,'blockposition'),(11,13,9,0,'blockposition'),(11,13,10,0,'blockposition'),(11,13,11,0,'blockposition'),(11,13,13,0,'blockposition'),(11,13,14,0,'blockposition'),(11,13,15,0,'blockposition'),(11,13,17,0,'blockposition'),(11,13,18,0,'blockposition'),(11,13,19,0,'blockposition'),(11,13,20,0,'blockposition'),(11,13,23,0,'blockposition'),(11,13,24,0,'blockposition'),(11,13,25,0,'blockposition'),(11,13,26,0,'blockposition'),(11,13,27,0,'blockposition'),(11,13,29,0,'blockposition'),(11,13,30,0,'blockposition'),(11,13,31,0,'blockposition'),(11,13,32,0,'blockposition'),(11,13,34,0,'blockposition'),(11,13,35,0,'blockposition'),(11,13,36,0,'blockposition'),(11,13,37,0,'blockposition'),(11,13,38,0,'blockposition'),(11,13,39,0,'blockposition'),(11,13,40,0,'blockposition'),(11,13,41,0,'blockposition'),(11,13,42,0,'blockposition'),(11,13,43,0,'blockposition'),(11,13,44,0,'blockposition'),(11,13,45,0,'blockposition'),(11,13,46,0,'blockposition'),(11,13,47,0,'blockposition'),(11,13,48,0,'blockposition'),(11,13,49,0,'blockposition'),(11,13,50,0,'blockposition'),(11,13,51,0,'blockposition'),(11,13,52,0,'blockposition'),(11,13,53,0,'blockposition'),(11,13,54,0,'blockposition'),(11,13,55,0,'blockposition'),(11,13,56,0,'blockposition'),(11,13,57,0,'blockposition'),(11,13,58,0,'blockposition'),(11,13,59,0,'blockposition'),(11,13,60,0,'blockposition'),(11,13,61,0,'blockposition'),(12,41,0,1,'blockposition'),(12,41,1,0,'blockposition'),(12,41,2,0,'blockposition'),(12,41,3,0,'blockposition'),(12,41,4,0,'blockposition'),(12,41,6,0,'blockposition'),(12,41,7,0,'blockposition'),(12,41,8,0,'blockposition'),(12,41,9,0,'blockposition'),(12,41,10,0,'blockposition'),(12,41,11,0,'blockposition'),(12,41,13,0,'blockposition'),(12,41,14,0,'blockposition'),(12,41,15,0,'blockposition'),(12,41,17,0,'blockposition'),(12,41,18,0,'blockposition'),(12,41,19,0,'blockposition'),(12,41,20,0,'blockposition'),(12,41,23,0,'blockposition'),(12,41,24,0,'blockposition'),(12,41,25,0,'blockposition'),(12,41,26,0,'blockposition'),(12,41,27,0,'blockposition'),(12,41,29,0,'blockposition'),(12,41,30,0,'blockposition'),(12,41,31,0,'blockposition'),(12,41,32,0,'blockposition'),(12,41,34,0,'blockposition'),(12,41,35,1,'blockposition'),(12,41,36,0,'blockposition'),(12,41,37,0,'blockposition'),(12,41,38,0,'blockposition'),(12,41,39,0,'blockposition'),(12,41,40,0,'blockposition'),(12,41,41,0,'blockposition'),(12,41,42,0,'blockposition'),(12,41,43,0,'blockposition'),(12,41,44,0,'blockposition'),(12,41,45,0,'blockposition'),(12,41,46,0,'blockposition'),(12,41,47,0,'blockposition'),(12,41,48,0,'blockposition'),(12,41,49,0,'blockposition'),(12,41,50,0,'blockposition'),(12,41,51,0,'blockposition'),(12,41,52,0,'blockposition'),(12,41,53,0,'blockposition'),(12,41,54,0,'blockposition'),(12,41,55,0,'blockposition'),(12,41,56,0,'blockposition'),(12,41,57,0,'blockposition'),(12,41,58,0,'blockposition'),(12,41,59,0,'blockposition'),(12,41,60,0,'blockposition'),(12,41,61,0,'blockposition'),(12,42,0,0,'blockposition'),(12,42,35,0,'blockposition');
+/*!40000 ALTER TABLE `dtb_block_position` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+/* 商品情報フリーエリア移管作業 */
+-- 1回のクエリとして同じセッションで実行すること
+
+SET SQL_SAFE_UPDATES = 0;
+
+UPDATE eccube.dtb_product
+SET free_area = REPLACE(free_area,
+  'if Category.id != 62',
+  'if Category and Category.id != 62'
+)
+WHERE free_area LIKE '%if Category.id != 62%';
+
+
+UPDATE eccube.dtb_product
+SET free_area = REPLACE(free_area,
+  'if Cat.Parent.id == 62',
+  'if Cat.Parent and Cat.Parent.id == 62'
+)
+WHERE free_area LIKE '%if Cat.Parent.id == 62%';
+
+
+UPDATE eccube.dtb_product
+SET free_area = REPLACE(free_area,
+  'if Cat.Parent.id == 62',
+  'if Cat.Parent and Cat.Parent.id == 62'
+)
+WHERE free_area LIKE '%if Cat.Parent.id == 62%';
+
+
+UPDATE eccube.dtb_product
+SET free_area = REPLACE(free_area,
+  'if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39',
+  'if Cat.Parent and (Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39)'
+)
+WHERE free_area LIKE '%if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39%';
+
+
+/* 案件情報の詳細情報に追加する */
+/* 確認用　
+SELECT
+  TRIM(REPLACE(REPLACE(
+    REGEXP_SUBSTR(free_area, 'アルコール度数：</th>[^<]*<td>[^<]+'),
+    SUBSTRING_INDEX(REGEXP_SUBSTR(free_area, 'アルコール度数：</th>[^<]*<td>[^<]+'), '<td>', 1),
+    ''
+  ), '<td>', '')) AS alcohol,
+
+  TRIM(REPLACE(REPLACE(
+    REGEXP_SUBSTR(free_area, '容量：</th>[^<]*<td>[^<]+'),
+    SUBSTRING_INDEX(REGEXP_SUBSTR(free_area, '容量：</th>[^<]*<td>[^<]+'), '<td>', 1),
+    ''
+  ), '<td>', '')) AS volume,
+
+  TRIM(REPLACE(REPLACE(
+    REGEXP_SUBSTR(free_area, 'ヴィンテージ：</th>[^<]*<td>[^<]+'),
+    SUBSTRING_INDEX(REGEXP_SUBSTR(free_area, 'ヴィンテージ：</th>[^<]*<td>[^<]+'), '<td>', 1),
+    ''
+  ), '<td>', '')) AS vintage,
+
+  TRIM(REPLACE(REPLACE(
+    REGEXP_SUBSTR(free_area, '受賞／評価：</th>[^<]*<td>[^<]+'),
+    SUBSTRING_INDEX(REGEXP_SUBSTR(free_area, '受賞／評価：</th>[^<]*<td>[^<]+'), '<td>', 1),
+    ''
+  ), '<td>', '')) AS award
+
+FROM dtb_product
+LIMIT 10;
+*/
+
+
+UPDATE dtb_product
+SET
+  origin = TRIM(REPLACE(REPLACE(
+    REGEXP_SUBSTR(free_area, '原産国：</th>[^<]*<td>[^<]+'),
+    SUBSTRING_INDEX(REGEXP_SUBSTR(free_area, '原産国：</th>[^<]*<td>[^<]+'), '<td>', 1),
+    ''
+  ), '<td>', '')),
+
+  alcohol = TRIM(REPLACE(REPLACE(
+    REGEXP_SUBSTR(free_area, 'アルコール度数：</th>[^<]*<td>[^<]+'),
+    SUBSTRING_INDEX(REGEXP_SUBSTR(free_area, 'アルコール度数：</th>[^<]*<td>[^<]+'), '<td>', 1),
+    ''
+  ), '<td>', '')),
+
+  capacity = TRIM(REPLACE(REPLACE(
+    REGEXP_SUBSTR(free_area, '容量：</th>[^<]*<td>[^<]+'),
+    SUBSTRING_INDEX(REGEXP_SUBSTR(free_area, '容量：</th>[^<]*<td>[^<]+'), '<td>', 1),
+    ''
+  ), '<td>', '')),
+
+  vintage = TRIM(REPLACE(REPLACE(
+    REGEXP_SUBSTR(free_area, 'ヴィンテージ：</th>[^<]*<td>[^<]+'),
+    SUBSTRING_INDEX(REGEXP_SUBSTR(free_area, 'ヴィンテージ：</th>[^<]*<td>[^<]+'), '<td>', 1),
+    ''
+  ), '<td>', '')),
+
+  award = TRIM(REPLACE(REPLACE(
+    REGEXP_SUBSTR(free_area, '受賞／評価：</th>[^<]*<td>[^<]+'),
+    SUBSTRING_INDEX(REGEXP_SUBSTR(free_area, '受賞／評価：</th>[^<]*<td>[^<]+'), '<td>', 1),
+    ''
+  ), '<td>', ''));
+
+
+/* GMOイプシロン決済プラグインの決済方法クラス名変更対応 */
+
+UPDATE dtb_payment
+SET method_class = 'Plugin\\EccubePaymentLite42\\Service\\Method\\Credit'
+WHERE method_class = 'Plugin\\GmoEpsilon4\\Service\\Method\\Credit';
+
+
+SET SQL_SAFE_UPDATES = 1;
+

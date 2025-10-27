@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ebe0dd62f0bd36071dad68bdd39341c",
+    "content-hash": "bd23e29aff5341f83611cb4453db647c",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -2377,6 +2377,30 @@
                 "http": {
                     "header": [
                         "X-ECCUBE-KEY: b7af9735f28054f8c87d04a0439ade5d05844536"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "ec-cube/eccubepaymentlite42",
+            "version": "4.4.1",
+            "dist": {
+                "type": "tar",
+                "url": "https://package-api-c2.ec-cube.net/v43/ec-cube/eccubepaymentlite42/4.4.1/EccubePaymentLite42-4.4.1.tgz"
+            },
+            "require": {
+                "ec-cube/plugin-installer": "^2.0"
+            },
+            "type": "eccube-plugin",
+            "extra": {
+                "code": "EccubePaymentLite42",
+                "id": 2667
+            },
+            "description": "EC-CUBEペイメントPlus決済プラグイン(4.2/4.3系)",
+            "transport-options": {
+                "http": {
+                    "header": [
+                        "X-ECCUBE-KEY: 07ddac663033f7cdfb539a256cef5341d0fc20bc"
                     ]
                 }
             }
