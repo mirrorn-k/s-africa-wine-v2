@@ -15,8 +15,6 @@ namespace Eccube\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-use Plugin\RelatedProduct42\Entity\ProductTrait as RelatedProductTrait;
-
 
 if (!class_exists('\Eccube\Entity\Product')) {
     /**
@@ -30,7 +28,6 @@ if (!class_exists('\Eccube\Entity\Product')) {
      */
     class Product extends \Eccube\Entity\AbstractEntity
     {
-        use RelatedProductTrait;
 
         private $_calc = false;
         private $stockFinds = [];
