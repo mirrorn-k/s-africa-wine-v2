@@ -2,3 +2,15 @@ services:
   ec-cube:
     env_file:
       - .env.local
+
+  ### Mailcatcher ##################################
+  mailcatcher:
+    image: schickling/mailcatcher
+    container_name: eccube-mailcatcher
+    ports:
+      - "1080:1080" # メール閲覧UI
+      - "1025:1025" # SMTP
+    volumes:
+      - mailcatcher_data:/data
+    networks:
+      - backend
